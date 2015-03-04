@@ -31,7 +31,7 @@ This example uses a model object that contains all of the fields required for su
 
 ## Step 4: Submit Request to Mercury
 
-* There is a helper class included in this repository that provides an example of how to call the endpoints below.  Please see:  Activate.PHP/Activate.PHP/Helpers/ActivateServiceHelper.php.
+* [Activate.PHP/Helpers/ActivateServiceHelper.php](Activate.PHP/Helpers/ActivateServiceHelper.php) is a helper class that will show you how to send requests to the Mercury API via JSON.
 
 ### Submit A Lead
 
