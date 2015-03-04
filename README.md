@@ -22,7 +22,16 @@ As a developer, you will also need to choose a submission entry point: Lead, Pro
 ## Step 2: Get a test API Key and password from Mercury 
 An API Key is required for a developer to communicate with Mercury’s MercuryActivate service. Each API Key is unique for that developer. It is also unique to the certification service used for testing. Once the certification review is passed, you will be provided with new credentials for use in production.
 
-## Step 3: Build your RESTful format: JSON or XML 
+## Step 3: Build your RESTful format
+
+This example uses a model object that contains all of the fields required for submission and then converts that model object to JSON.
+
+The model object can be found in this file:  Activate.PHP/Activate.PHP/Model/MerchantData.php.
+The code that converts the model to JSON is here:  Activate.PHP/Activate.PHP/Helpers/ObjectHelper.php.
+
+## Step 4: Submit Request to Mercury
+
+There is a helper class included in this repository that provides an example of how to call the endpoints below.  Please see:  Activate.PHP/Activate.PHP/Helpers/ActivateServiceHelper.php.
 
 ### Submit A Lead
 
