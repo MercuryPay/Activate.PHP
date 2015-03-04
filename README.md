@@ -7,67 +7,116 @@
 
 ##Overview
 
-MercuryActivate is an enrollment service that enables merchants to apply to Mercury through an online form. This shortens the enrollment time so that your merchants can start processing payments as quickly as possible. MercuryActivate offers especially fast turn-around times for enrollment types where details such as contract pricing have been pre-negotiated. 
-This code repository is an example of a PHP web form to collect your data and validate it before submitting it to Mercury as a lead using our REST API.
-
-While test credentials are provided within the code repository for ease of use please request test credentials for your integration by following the instructions in Step 2 below.
+This code repository is an example of a PHP web form to collect your data and validate it before submitting it to Mercury as a lead using our REST API. We have provided test credentials in the code but please obtain your own test credentials from Mercury as this will facilitate an easier integration process.
 
 ## Step 1: Choose Your API Style and Entry Point
 
 You can use either JSON or XML RESTful messaging.
 
-You will also need to choose a submission entry point: Lead, Prospect or hybrid. 
+As a developer, you will also need to choose a submission entry point: Lead, Prospect or hybrid.
 
 * A Lead submission requires five data points 
 * A Prospect submission requires over 30 data points 
 * A hybrid submission consists of the five required data points plus a subset of the data points for a Prospect. The developer decides which data points to include. 
 
-Although the possible data passed is identical for both entry points, the Prospect ensures that the data being sent is ready for a full underwriting check, which will shorten the time to merchant processing. The Lead entry point requires less data and is used so that Mercury can follow up on a more formal lead.
-
 ## Step 2: Get a test API Key and password from Mercury 
-
-An API Key is required for a developer to communicate with Mercury’s MercuryActivate service. Each API Key is unique for that developer. It is also unique to the certification service used for testing. Once the certification review is passed, you will be provided with new credentials for use in production. 
+An API Key is required for a developer to communicate with Mercury’s MercuryActivate service. Each API Key is unique for that developer. It is also unique to the certification service used for testing. Once the certification review is passed, you will be provided with new credentials for use in production.
 
 ## Step 3: Build your RESTful format: JSON or XML 
 
-The RESTful API can pass messages that are either JSON-formatted or XML-formatted; the entry points are identical. Whereas the JSON format is perhaps simpler to implement, the XML style may be more familiar to you. 
-The message formatting is determined by the HTML headers passed to the service. If you omit specific instructions for what type of message format you are using, the service will default to XML. 
+### Submit A Lead
 
-* With the XML style, the data elements must be maintained in the same order as listed in the documentation. Out of order elements will cause missed values. 
-* The JSON format is not picky about element order.
+To submit a Lead or hybrid through an HTTP POST use this endpoint:  https://activatebeta.mps-lab.com:8121/Lead/Submission
 
-After the Lead or Prospect is successfully submitted, it becomes an Application. Future status checks on an Application can be queried using the returned ApplicationId.
+Here is a JSON example for a Lead submission:
 
+```
+{
+  "OwnerFirstName":"Jenny",
+  "OwnerLastName":"Smith",
+  "OwnerEmail":"Jenny@HelpMe.com",
+  "DBAName":"What's For Dinner?",
+  "DBAPhone":"7192223333"
+}
+```
 
-## Step 4: Certification and Testing
+### Submit a Prospect
 
-When you have completed your integration, your Developer Integration analyst will work with you to certify that your solution is ready to be released into production. This process includes a review of:
+To submit a Prospect through an HTTP POST use this endpoint:  https://activatebeta.mps-lab.com:8121/QualifiedLead/Submission
+	
+Here is an XML example for a Prospect submission 
 
-* Branding (i.e., Mercury logo)
-* Legal disclaimers
-* Mercury’s Hours of Operations
-* Lead vs Prospect data element completion
-* The validation and verification of data points seen in the test submissions
+```
+<Request>
+  <OwnerTitle>General Manager Store 5150</OwnerTitle>
+  <OwnerFirstName>Gustavo</OwnerFirstName>
+  <OwnerMiddleName>Reyna</OwnerMiddleName>
+  <OwnerLastName>Argo</OwnerLastName>
+  <OwnerSuffix>PHD</OwnerSuffix>
+  <OwnerDOBDay>10</OwnerDOBDay>
+  <OwnerDOBMonth>6</OwnerDOBMonth>
+  <OwnerDOBYear>1985</OwnerDOBYear>
+  <OwnerSSN>123456789</OwnerSSN>
+  <OwnerEmail>grargo@HelpMe.com</OwnerEmail>
+  <OwnerAddress>200 Main St</OwnerAddress>
+  <OwnerCity>Denver</OwnerCity>
+  <OwnerStateOrProvince>CO</OwnerStateOrProvince>
+  <OwnerPostalCode>80229</OwnerPostalCode>
+  <OwnerCountry>US</OwnerCountry>
+  <DBAName>What&apos;s for Dinner?</DBAName>
+  <DBAAddress>100 Main St</DBAAddress>
+  <DBACity>Denver</DBACity>
+  <DBAStateOrProvince>CO</DBAStateOrProvince>
+  <DBAPostalCode>80229</DBAPostalCode>
+  <DBACountry>US</DBACountry>
+  <DBAPhone>3031112222</DBAPhone>
+  <DBAExtension>1234</DBAExtension>
+  <LegalName>Zoom Dinner Inc</LegalName>
+  <LegalAddress>300 Main St</LegalAddress>
+  <LegalCity>Denver</LegalCity>
+  <LegalStateOrProvince>CO</LegalStateOrProvince>
+  <LegalPostalCode>80229</LegalPostalCode>
+  <LegalCountry>US</LegalCountry>
+  <LegalPhone>3031113333</LegalPhone>
+  <LegalExtension>1122</LegalExtension>
+  <ProductServiceSold>Prepared Food</ProductServiceSold>
+  <Market>722210</Market>
+  <SIC>5812</SIC>
+  <TaxId>1231111234</TaxId>
+  <AvgTicket>15.50</AvgTicket>
+  <DailyVolume>4125.00</DailyVolume>
+  <AnnualSalesVisaMc>1240000.00</AnnualSalesVisaMc>
+  <CurrencyType>USD</CurrencyType>
+  <PercentRetailSwipedTransactions>80</PercentRetailSwipedTransactions>
+  <PercentCardKeyedTransactions>10</PercentCardKeyedTransactions>
+  <PercentMailOrderTransactions>0</PercentMailOrderTransactions>
+  <Dda>123 4567 8900</Dda>
+  <Routing>111222333</Routing>
+  <FinancialInstitutionName>Wells Fargo</FinancialInstitutionName>
+  <IsChecking>true</IsChecking>
+  <FinancialInstitutionNumber>111222333</FinancialInstitutionNumber>
+  <OwnershipType>LLC</OwnershipType>
+  <ReferenceString>Admin@HelpMe.com</ReferenceString>
+</Request>
+```
 
-Use Cases for Certification 
+### Status Response
 
-* Lead Use Case 
-* Prospect Use Case 
+To get the status on the application via an HTTP GET use this endpoint:  https://activatebeta.mps-lab.com:8121/Application/Status/{id}
 
-Your Developer Integrations analyst will test your integration as follows, using a set of test merchant profiles that include both positive and negative test cases: 
+Where {id} is the integer representing the application ID returned from the submission.
 
-1. Setup a screen share between yourself and your Developer Integrations analyst, and display your application form so your analyst can observe you entering data. 
-2. Enter the Test Merchant Profile data 
-3. The Developer Integrations analyst will examine the application form to confirm that the following required components are present: 
-  1. Mercury logo is present and Mercury is identified to the merchant as the relationship owner for credit card processing.
-  2. Mercury’s Hours of Operations are identified to the merchant. 
-  3. Mercury’s Customer Service Number is provided to the merchant. 
-  4. It is clearly stated that Mercury will be reviewing this account and may potentially pull a Credit Score if needed for Underwriting. 
-4. Click the submit button (or equivalent). This will immediately send the test data from your application form to Mercury’s server. Using Mercury’s backend dashboard, the Developer Integrations analyst will: 
-  1. Determine if the information sent is properly identified as a Lead or Prospect.
-  2. Analyze the merchant information and inform you of any issues, concerns, or missing elements. 
+The format of the successful status responses messages for the get lead status or get Prospect status calls is identical. 
 
-This process will be repeated until all issues are successfully addressed, then the Developer Integrations analyst will officially certify your application. Upon successful certification, the Developer Integration analyst will provision you in the Production Environment. You can then start using MercuryActivate for your merchants.
+Here is the JSON formatted response:
+
+```
+{
+  "CmdStatus":"Success",
+  "TextResponse":"Submitted",
+  "ApplicationId": "0D9217A9-1559-437D-A1A6-6283215CAD44"
+}
+```
 
 
 ###©2015 Mercury Payment Systems, LLC - all rights reserved.
