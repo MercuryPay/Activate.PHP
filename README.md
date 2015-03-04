@@ -1,5 +1,4 @@
 # Activate.PHP
-==========
 
 * More documentation?  http://developer.mercurypay.com
 * Questions?  integrationteam@mercurypay.com
