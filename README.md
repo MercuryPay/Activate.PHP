@@ -13,7 +13,7 @@ This code repository is an example of a PHP web form to collect your data and va
 
 While test credentials are provided within the code repository for ease of use please request test credentials for your integration by following the instructions in Step 2 below.
 
-## Step 1: Choose Your API Style
+## Step 1: Choose Your API Style and Entry Point
 
 You can use either JSON or XML RESTful messaging.
 
