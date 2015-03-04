@@ -13,13 +13,14 @@ This code repository is an example of a PHP web form to collect your data and va
 
 You can use either JSON or XML RESTful messaging.
 
-As a developer, you will also need to choose a submission entry point: Lead, Prospect or hybrid.
+As a developer, you will also need to choose a submission entry point: *Lead*, *Prospect* or *hybrid*.
 
-* A Lead submission requires five data points 
-* A Prospect submission requires over 30 data points 
-* A hybrid submission consists of the five required data points plus a subset of the data points for a Prospect. The developer decides which data points to include. 
+* A *Lead* submission requires five data points 
+* A *Prospect* submission requires over 30 data points 
+* A *hybrid* submission consists of the five required data points plus a subset of the data points for a Prospect. The developer decides which data points to include. 
 
 ## Step 2: Get a test API Key and password from Mercury 
+
 An API Key is required for a developer to communicate with Mercury’s MercuryActivate service. Each API Key is unique for that developer. It is also unique to the certification service used for testing. Once the certification review is passed, you will be provided with new credentials for use in production.
 
 ## Step 3: Build your RESTful format
