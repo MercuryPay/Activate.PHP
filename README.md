@@ -39,7 +39,7 @@ The message formatting is determined by the HTML headers passed to the service. 
 After the Lead or Prospect is successfully submitted, it becomes an Application. Future status checks on an Application can be queried using the returned ApplicationId.
 
 
-## Step 3: Certification and Testing
+## Step 4: Certification and Testing
 
 When you have completed your integration, your Developer Integration analyst will work with you to certify that your solution is ready to be released into production. This process includes a review of:
 
