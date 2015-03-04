@@ -7,7 +7,7 @@
 
 ##Overview
 
-This code repository is an example of a PHP web form to collect your data and validate it before submitting it to Mercury as a lead using our REST API. We have provided test credentials in the code but please obtain your own test credentials from Mercury as this will facilitate an easier integration process.
+This code repository is an example of a PHP web form to collect your data and validate it before submitting it to Mercury as a lead using our REST API.
 
 ## Step 1: Choose Your API Style and Entry Point
 
