@@ -26,8 +26,8 @@ An API Key is required for a developer to communicate with Mercury’s MercuryAc
 
 This example uses a model object that contains all of the fields required for submission and then converts that model object to JSON.
 
-* The model object can be found in this file:  Activate.PHP/Activate.PHP/Model/MerchantData.php.
-* The code that converts the model to JSON is here:  Activate.PHP/Activate.PHP/Helpers/ObjectHelper.php.
+* [The model object can be found here](Activate.PHP/Activate.PHP/Model/MerchantData.php).
+* [The code that converts the model to JSON can be found here](Activate.PHP/Activate.PHP/Helpers/ObjectHelper.php).
 
 ## Step 4: Submit Request to Mercury
 
