@@ -7,23 +7,23 @@
 
 ##Overview
 
-This code repository is an example of a PHP web form to collect your data and validate it before submitting it to Mercury as a lead using our REST API.
+MercuryActivate&trade; is a secure enrollment service that enables merchants to apply to Mercury through an online form.  This code repository is a example web form, written in PHP, that can be used to collect and validate data before submitting it to Mercury.
 
-## Step 1: Choose Your API Style and Entry Point
+## Step 1: Choose Your Payload Style and Entry Point
 
-You can use either JSON or XML RESTful messaging.
+You can use either JSON or XML payloads.
 
-As a developer, you will also need to choose a submission entry point: **Lead**, **Prospect** or **hybrid**.
+There are three entry points each with varying number of data attribute requirements: **Lead**, **Prospect** or **hybrid**.
 
-* A **Lead** submission requires five data points 
-* A **Prospect** submission requires over 30 data points 
-* A **hybrid** submission consists of the five required data points plus a subset of the data points for a Prospect. The developer decides which data points to include. 
+* A **Lead** submission requires five data attributes.
+* A **Prospect** submission requires over 30 data attributes.
+* A **hybrid** submission consists of the five required data attributes plus a subset of the data attributes for a Prospect. The developer decides which data attributes to include. 
 
 ## Step 2: Get a test API Key and password from Mercury 
 
-An API Key is required for a developer to communicate with Mercury’s MercuryActivate service. Each API Key is unique for that developer. It is also unique to the certification service used for testing. Once the certification review is passed, you will be provided with new credentials for use in production.
+An API Key is required to communicate with the MercuryActivate&trade; service. Each API Key is unique for each developer and to the certification environment used for testing. Once the certification review is complete, new production credentials will be provided.
 
-## Step 3: Build your RESTful format
+## Step 3: Build your Payload
 
 This example uses a model object that contains all of the fields required for submission and then converts that model object to JSON.
 
@@ -114,7 +114,7 @@ Here is an XML example for a Prospect submission
 
 To get the status on the application via an HTTP GET use this endpoint:  https://activatebeta.mps-lab.com:8121/Application/Status/{id}
 
-Where {id} is the integer representing the application ID returned from the submission.
+Where {id} is the integer representing the ApplicationID returned from the submission.
 
 The format of the successful status responses messages for the get lead status or get Prospect status calls is identical. 
 
