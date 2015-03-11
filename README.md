@@ -7,7 +7,7 @@
 
 ##Overview
 
-MercuryActivate&trade; is a secure enrollment service that enables merchants to apply to Mercury through an online form.  This code repository is a example web form, written in PHP, that can be used to collect and validate data before submitting it to Mercury.
+MercuryActivate&trade; is a secure enrollment service that enables merchants to apply to Mercury through an online form.  This code repository is an example web form, written in PHP, that can be used to collect and validate data before submitting it to Mercury.
 
 ## Step 1: Choose Your Payload Style and Entry Point
 
@@ -21,7 +21,7 @@ There are three entry points each with varying number of data attribute requirem
 
 ## Step 2: Get a test API Key and password from Mercury 
 
-An API Key is required to communicate with the MercuryActivate&trade; service. Each API Key is unique for each developer and to the certification environment used for testing. Once the certification review is complete, new production credentials will be provided.
+An API Key is required to communicate with the MercuryActivate&trade; service. Each API Key is unique for each developer and to the certification environment used for testing. When the certification review is complete, new production credentials will be provided.
 
 ## Step 3: Build your Payload
 
