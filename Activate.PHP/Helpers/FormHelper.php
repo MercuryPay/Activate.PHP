@@ -1,5 +1,5 @@
 <?php
-	include("Helpers/ObjectHelper.php");
+	include_once("Helpers/ObjectHelper.php");
 	
 	class FormHelper{
 		
