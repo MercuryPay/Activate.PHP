@@ -1,6 +1,6 @@
 <?php
-	include("../Helpers/FormHelper.php");
-	include("../Model/Submission.php");
+	include_once("Helpers/FormHelper.php");
+	include_once("Model/Submission.php");
 	
 	class _statusFormView{
 		public static function buildForm(Submission $submission){
