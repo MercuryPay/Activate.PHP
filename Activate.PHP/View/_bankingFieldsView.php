@@ -1,6 +1,6 @@
 <?php
-	include("../Helpers/FormHelper.php");
-	include("../Model/MerchantData.php");
+	include_once("Helpers/FormHelper.php");
+	include_once("Model/MerchantData.php");
 
 	class _bankingFieldsView{
 		public static function buildFields(MerchantData $model){
