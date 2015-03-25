@@ -67,7 +67,7 @@
 			
 				$line = trim(substr($line, $atPos));
 			
-				if (strlen($line) > $atPost) {
+				if (strlen($line) > $atPos) {
 					$vPos = strpos($line, "\\", $atPos);
 				}
 				
