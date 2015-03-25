@@ -1,8 +1,8 @@
 <?php
-	include('../Model/Submission.php');
-	include('../Model/MerchantData.php');
-	include('_submissionFormView.php');
-	include('_statusFormView.php');
+	include_once('Model/Submission.php');
+	include_once('Model/MerchantData.php');
+	include_once('View/_submissionFormView.php');
+	include_once('View/_statusFormView.php');
 				
 	class AppDoc{
 		function __construct(Submission $submission){
