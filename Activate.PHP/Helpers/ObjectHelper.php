@@ -67,7 +67,10 @@
 			
 				$line = trim(substr($line, $atPos));
 			
-				$vPos = strpos($line, "\\", $atPos);
+				if (strlen($line) > $atPost) {
+					$vPos = strpos($line, "\\", $atPos);
+				}
+				
 				if($vPos == false) continue;
 			
 				$t = explode("\\", trim($line));
