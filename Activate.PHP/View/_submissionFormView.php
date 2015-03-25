@@ -1,11 +1,11 @@
 <?php
-	include("../Helpers/FormHelper.php");
-	include("../Model/MerchantData.php");
-	include('_dbaFieldsView.php');
-	include('_legalFieldsView.php');
-	include('_ownerFieldsView.php');
-	include('_businessFieldsView.php');
-	include('_bankingFieldsView.php');
+	include_once("Helpers/FormHelper.php");
+	include_once("Model/MerchantData.php");
+	include_once('View/_dbaFieldsView.php');
+	include_once('View/_legalFieldsView.php');
+	include_once('View/_ownerFieldsView.php');
+	include_once('View/_businessFieldsView.php');
+	include_once('View/_bankingFieldsView.php');
 	
 	class _submissionFormView{
 		public static function buildForm(Submission $submission){
