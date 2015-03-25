@@ -2,7 +2,7 @@
 include_once("Model/MerchantData.php");
 
 class ActivateServiceHelper{
-	const ServiceAddress = " https://activatebeta.mps-lab.com:8121/";
+	const ServiceAddress = "https://activatebeta.mps-lab.com:8121/";
 	const PayloadFormat = "application/json";
 	const ServiceAPICredentials = "Basic NzhBQjJCOTYtQUY3OC00NUZDLUEzMjYtODlFMEQ2NzgwMkRBOnBhc3N3b3JkMQ==";
 	
