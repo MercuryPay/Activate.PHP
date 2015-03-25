@@ -1,8 +1,8 @@
 <?php
-	include("Model/Submission.php");
-	include("Model/MerchantData.php");
-	include("View/AppDoc.php");
-	include("Helpers/ActivateServiceHelper.php");
+	include_once("Model/Submission.php");
+	include_once("Model/MerchantData.php");
+	include_once("View/AppDoc.php");
+	include_once("Helpers/ActivateServiceHelper.php");
 
 	$contextName = 'Lead';
 	$view = 'basic';
