@@ -1,6 +1,5 @@
 <?php
-include("../Model/SubmissionResponse.php");
-include("../Model/MerchantData.php");
+include("Model/MerchantData.php");
 
 class ActivateServiceHelper{
 	const ServiceAddress = " https://activatebeta.mps-lab.com:8121/";
