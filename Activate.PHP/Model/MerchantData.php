@@ -439,6 +439,18 @@
 		 */
 		public $PercentMailOrderTransactions = NULL;
 
+		/**
+		 * 
+		 * @var Integer: NULL or 0 - 100
+		 * 
+		 * @displayName\Total %
+		 * @requiredWhen\Qualified
+		 * @type\number
+		 * 
+		 */
+		public $PercentTotalTransaction = NULL;
+
+
 		//Banking information
 		
 		/**
