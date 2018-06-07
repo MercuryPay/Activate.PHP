@@ -1,11 +1,14 @@
 # Activate.PHP
 
-* More documentation?  http://developer.mercurypay.com
+<a href="https://developer.vantiv.com/?utm_campaign=githubcta&utm_medium=hyperlink&utm_source=github&utm_content=gotquestions">Got questions? Connect with our experts on Vantiv ONE.</a>
+
+<a href="https://developer.vantiv.com/?utm_campaign=githubcta&utm_medium=hyperlink&utm_source=github&utm_content=codingforcommerce">Are you coding for commerce? Connect with our experts on Vantiv ONE.</a>
+
 * Questions?  integrationteam@mercurypay.com
 * **Feature request?** Open an issue.
 * Feel like **contributing**?  Submit a pull request.
 
-##Overview
+## Overview
 
 MercuryActivate&trade; is a secure enrollment service that enables merchants to apply to Mercury through an online form.  This code repository is an example web form, written in PHP, that can be used to collect and validate data before submitting it to Mercury.
 
@@ -129,7 +132,7 @@ Here is the JSON formatted response:
 ```
 
 
-###©2015 Mercury Payment Systems, LLC - all rights reserved.
+### ©2015 Mercury Payment Systems, LLC - all rights reserved.
 
 Disclaimer:
 This software and all specifications and documentation contained herein or provided to you hereunder (the "Software") are provided free of charge strictly on an "AS IS" basis. No representations or warranties are expressed or implied, including, but not limited to, warranties of suitability, quality, merchantability, or fitness for a particular purpose (irrespective of any course of dealing, custom or usage of trade), and all such warranties are expressly and specifically disclaimed. Mercury Payment Systems shall have no liability or responsibility to you nor any other person or entity with respect to any liability, loss, or damage, including lost profits whether foreseeable or not, or other obligation for any cause whatsoever, caused or alleged to be caused directly or indirectly by the Software. Use of the Software signifies agreement with this disclaimer notice.
